@@ -1,0 +1,58 @@
+.foooter{
+      display: flex;
+      flex-direction: column;
+      background-color: #07393E;
+  }
+  .foooter .sectionone{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #07393E;
+  
+  }
+  footer img {
+      width: 200px;
+  }
+  footer .contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+  }
+  .contact h2 {
+      font-size: 2em;
+      color: white;
+  
+  } 
+  .contact p {
+      font-size: 1.5em;
+      color: white;
+      font-weight: 500;
+  }
+  .icon a {
+      font-size: 2em;
+      padding: 0 10px;
+      color: white;
+      transition: all 0.5s ease;
+  
+  } 
+  .icon a:hover {
+      color: #FF0000;
+  
+  }
+  
+  .sectiontwo p {
+      text-align: center;
+      color: white;
+      font-size: 1.25em;
+      font-weight: 700;
+      padding: 3px;
+  
+  }
+  .sectiontwo  {
+  margin: 30px;
+  
+  } 
+  

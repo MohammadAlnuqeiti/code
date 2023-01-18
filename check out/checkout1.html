@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/checkout1.css">
+
+  <!--
+    - google font link
+  -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Source+Sans+3:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+    rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header"> 
+      
+        <a href="./index.html">
+            <img  id="logo" src="./image/logo.png" alt="">
+        </a>
+  
+        <div style="width: 90%;">
+            <form id="form" class="form">
+                <input type="search" placeholder="Search..." required class="search">
+                <input type="button" value="Search" class="button">
+            </form>
+        </div>
+   
+        <div class="navbar">
+           
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./shop.html" class="nav-link">COURSES </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./about.html" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contact.html" class="nav-link">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./login.html" class="nav-link">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn">REGISTER 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="./register.html">REGISTER AS STUDENT</a>
+                          <a href="./registerEngineering.html">REGISTER AS ENGINEERING</a>
+                        </div>
+                    </div>
+                    <!-- <a href="./register.html"><button id="btn-nav" class="nav-link">REGISTER</button></a> -->
+                </li>
+            </ul>
+             <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        </div>
+       
+    
+</header>
+<header id="hidden" class="header">
+    <div style="width: 90%;">
+        <form id="form">
+            <input type="search" placeholder="Search..." required class="search">
+            <input type="button" value="Search" class="button">
+        </form>
+    </div>
+</header>
+
+  <!--
+    - main container
+  -->
+
+  <main class="container">
+
+
+
+    <div class="item-flex">
+
+      <!--
+       - checkout section
+      -->
+      <section class="checkout">
+
+        <h2 class="section-heading">Payment Details</h2>
+
+        <div class="payment-form">
+
+          <div class="payment-method">
+
+            <button class="method selected">
+              <ion-icon name="card"></ion-icon>
+
+              <span>Credit Card</span>
+
+              <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+            </button>
+
+            <button class="method">
+              <ion-icon name="logo-paypal"></ion-icon>
+
+              <span>PayPal</span>
+
+              <ion-icon class="checkmark" name="checkmark-circle-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <form action="#">
+
+            <div class="cardholder-name">
+              <label for="cardholder-name" class="label-default">Cardholder name</label>
+              <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+            </div>
+
+            <div class="card-number">
+              <label for="card-number" class="label-default">Card number</label>
+              <input type="number" name="card-number" id="card-number" class="input-default">
+            </div>
+
+            <div class="input-flex">
+
+              <div class="expire-date">
+                <label for="expire-date" class="label-default">Expiration date</label>
+
+                <div class="input-flex">
+
+                  <input type="number" name="day" id="expire-date" placeholder="31" min="1" max="31"
+                    class="input-default">
+                  /
+                  <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12"
+                    class="input-default">
+
+                </div>
+              </div>
+
+              <div class="cvv">
+                <label for="cvv" class="label-default">CVV</label>
+                <input type="number" name="cvv" id="cvv" class="input-default">
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+        <button class="btn btn-primary">
+          <b>Pay</b> $ <span id="payAmount">2.15</span>
+        </button>
+
+      </section>
+
+
+      <!--
+        - cart section
+      -->
+      <section class="cart">
+
+        <div class="cart-item-box">
+
+          <h2 class="section-heading">Order Summery</h2>
+
+
+            <div class="amount">
+
+                <div class="subtotal">
+                  <span>Subtotal</span> <span>$ <span id="subtotal">2.05</span></span>
+                </div>
+    
+                <div class="tax">
+                  <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
+                </div>
+    
+               
+    
+                <div class="total">
+                  <span>Total</span> <span>$ <span id="total">2.15</span></span>
+                </div>
+    
+              </div>
+    
+          
+<!-- 
+              <button class="product-close-btn">
+                <ion-icon name="close-outline"></ion-icon>
+              </button> -->
+
+         
+
+          
+
+       
+            </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+
+
+<!-- Scroll to top -->
+<span class="up"> <i class="fa-solid fa-up-long"></i></span>
+<!-- Scroll to top -->
+
+<footer class="footer">
+    <div class="cont_footer">
+        <div class="row_footer">
+
+            <div class="col_footer">
+                <h4> Company </h4>
+                <ul>
+                    <li><a href="./index.html"> Home</a></li>
+                    <li><a href="./about.html"> About Us</a></li>
+                    <li><a href="./contact.html"> Contact Us</a></li>
+   
+                    
+                </ul>
+            </div>
+            
+            <div class="col_footer">
+                <h4> Quick Links </h4>
+                <ul>
+                    <li><a href="./login.html"> Login</a></li>
+                    <li><a href="./register.html"> Register</a></li>
+                    <li><a href="#"> Shop Now </a></li>
+                </ul>
+            </div>
+
+            <div class="col_footer">
+                <h4> Courses </h4>
+                    <div class="time_footer">
+                        <ul>
+                            <li><a href="#"> All Courses  </a></li>
+                            <li><a href="#"> Civil Engineering </a></li>
+                            <li><a href="#"> Electrical Engineering </a></li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="col_footer">
+
+                <h4> Follow Us </h4>
+
+                <div class="socail_footer">  
+                    <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                    <a href="#"><i class="fa-solid fa-square-phone"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"> </i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"> </i></a>
+                </div>
+
+                <div class="qouat_footer">
+                    <p> <span>Nuqeiti For Training . </span> Develop a specific career skill through a series of related
+                        courses and hands-on projects. Put theory into practice
+                        and earn a Specialization Certificate to add to your CV.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+
+</footer>
+<div class="footer-botoom">
+    <p> Copyright &copy; 2023 <span>Nuqeiti For Training </span> . designed by <span> Mohammad Al-nuqeiti </span> </p>
+</div>
+<script src="./JS/scroll.js"></script>
+<script src="./JS/jave.js"></script>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./checkout.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
